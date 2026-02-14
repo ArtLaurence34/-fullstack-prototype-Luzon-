@@ -1,0 +1,150 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: #1f2937;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav a,
+nav button {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+nav a:hover,
+nav button:hover {
+  background: #374151;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ===== HEADINGS ===== */
+h1, h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ===== FORMS ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  padding: 10px 14px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f3f4f6;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+/* ===== PAGE VISIBILITY ===== */
+.page { display: none; }
+.page.active { display: block; }
+
+body.not-authenticated .role-logged-in { display: none; }
+body.authenticated .role-logged-out { display: none; }
+
+.role-admin { display: none; }
+body.is-admin .role-admin { display: inline-block; }
+
+/* ===== SMALL BADGE STYLE (Optional for status) ===== */
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
